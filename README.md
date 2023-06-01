@@ -1,7 +1,14 @@
 # Data platform - case studies
 
 _**Still in progress, stay tuned!**_
+<br>
 
+## Links to be reviewed
+* [SnowPlow](https://github.com/snowplow/snowplow)
+* [SeaTunnel](https://github.com/apache/seatunnel)
+*
+
+## Introduction
 * In this repository I document my research of different existing DP / ETL solutions which are publicly available on GitHub
 * I heavily utilized AI tools for this project - ChatGPT-4, ChatSonic and Github Copilot
 
@@ -52,8 +59,13 @@ I will rate each project by stars (★☆☆☆☆ / ★★☆☆☆ / ★★★
 <br>
 
 ## Learning resources
+
+### Videos
 * [YouTube video course - Data Engineering Project Portfolio](https://www.youtube.com/playlist?list=PLBJe2dFI4sgukOW6O0B-OVyX9c6fQKJ2N)
 * [YouTube video course - Data Pipeline on AWS](https://www.youtube.com/playlist?list=PLBJe2dFI4sgt-9GR2j-rTeKtimE9pfqyt)
 * [Stock Market Real-Time Data Analysis Using Kafka](https://www.youtube.com/watch?v=KerNf0NANMo)
 * [Twitter Data Pipeline using Airflow for Beginners](https://www.youtube.com/watch?v=q8q3OFFfY6c)
 * [Scrape Amazon Data using Python](https://www.youtube.com/watch?v=2hPCX-p_X8Q)
+
+### Articles & repositories
+* [How To Become a Data Engineer](https://github.com/adilkhash/Data-Engineering-HowTo)
