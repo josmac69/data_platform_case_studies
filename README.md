@@ -1,4 +1,7 @@
 # Data platform - case studies
+
+_**Still in progress, stay tuned!**_
+
 * In this repository I document my research of different existing DP / ETL solutions which are publicly available on GitHub
 * I heavily utilized AI tools for this project - ChatGPT-4, ChatSonic and Github Copilot
 
