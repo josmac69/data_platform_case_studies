@@ -5,7 +5,7 @@ https://github.com/ankurchavda/streamify
 
 ## Schema
 (Downloaded from Streamify repository)
-<img src="architecture.png" width=60% height=30%>
+<img src="architecture.jpg" width=60% height=30%>
 
 ## Overview
 The repository "Streamify" is a data engineering project that creates a data pipeline using various technologies. Here's a detailed summary:

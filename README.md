@@ -35,6 +35,8 @@ I will rate each project by stars (★☆☆☆☆ / ★★☆☆☆ / ★★★
   * Data pipeline with Kafka, Spark, dbt, Docker, Airflow, Terraform, GCP
   * Solution is just a show case, it is not running on kubernetes, it is build using virtual machines on GCP
   * Docker images are quite complex, containing also Google Cloud SDK
+  * Looks like `dbt` tool is used for data transformation, which is actually not recommended by dbt documentation
+  * `dbt` is implemented using airflow running in bash operator, which is also not the best practice
   * Looks like it is not possible to run the whole pipeline locally without GCP
   * Looks like there are some testing scripts in the repository, which are not used in the pipeline
 <br>
@@ -51,4 +53,7 @@ I will rate each project by stars (★☆☆☆☆ / ★★☆☆☆ / ★★★
 
 ## Learning resources
 * [YouTube video course - Data Engineering Project Portfolio](https://www.youtube.com/playlist?list=PLBJe2dFI4sgukOW6O0B-OVyX9c6fQKJ2N)
-  *
+* [YouTube video course - Data Pipeline on AWS](https://www.youtube.com/playlist?list=PLBJe2dFI4sgt-9GR2j-rTeKtimE9pfqyt)
+* [Stock Market Real-Time Data Analysis Using Kafka](https://www.youtube.com/watch?v=KerNf0NANMo)
+* [Twitter Data Pipeline using Airflow for Beginners](https://www.youtube.com/watch?v=q8q3OFFfY6c)
+* [Scrape Amazon Data using Python](https://www.youtube.com/watch?v=2hPCX-p_X8Q)
