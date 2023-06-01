@@ -4,7 +4,7 @@
 https://github.com/ABZ-Aaron/Reddit-API-Pipeline
 
 ## Schema
-
+(Picture is downloaded from Reddit API Pipeline repository)
 <img src="workflow.png" width=30% height=30%>
 
 ## Overview
@@ -13,7 +13,7 @@ https://github.com/ABZ-Aaron/Reddit-API-Pipeline
 * This project is a data pipeline designed to extract data from the Data Engineering subreddit on Reddit.
 * The output of this pipeline is a Google Data Studio report, which provides insights into the Data Engineering subreddit.
 
-Here's a detailed breakdown of the architecture of this ETL data pipeline:
+### Breakdown of the architecture of this ETL data pipeline:
 
 1. **Extract Data Using Reddit API**: The pipeline begins by extracting data from the Data Engineering subreddit using the Reddit API. This is the "Extract" part of the ETL process.
 
@@ -25,9 +25,15 @@ Here's a detailed breakdown of the architecture of this ETL data pipeline:
 
 5. **Create PowerBI or Google Data Studio Dashboard**: After the data has been transformed, a dashboard is created using either PowerBI or Google Data Studio. This dashboard provides a visual representation of the data and allows for easy interpretation of the insights derived from the data.
 
-6. **Orchestrate with Airflow in Docker**: The entire pipeline is orchestrated using Apache Airflow, a platform used to programmatically author, schedule, and monitor workflows. Airflow is run within Docker, a platform that allows for the packaging of applications and their dependencies into a standardized unit for software development.
+6. **Orchestrate with Airflow in Docker**:
+  * The entire pipeline is orchestrated using Apache Airflow.
 
-7. **Create AWS Resources with Terraform**: Terraform, an open-source infrastructure as code software tool, is used to create and manage the AWS resources required for this pipeline.
+7. **Create AWS Resources with Terraform**:
+* Terraform is used to create and manage the AWS resources required for this pipeline. It manages:
+  * AWS IAM role
+  * AWS security group
+  * AWS S3 bucket
+  * Redshift cluster
 
 The final output from this pipeline is a Google Data Studio report. The report is reading from a static CSV output from Redshift. The Redshift database was deleted after the data extraction to avoid incurring costs.
 
@@ -49,6 +55,7 @@ The repository also provides detailed setup instructions and notes on potential 
 ## Parts
 
 * [Airflow](airflow.md)
+  * docker-compose file is taken from official Airflow repository
 
 
 ## AI prompt

@@ -4,17 +4,27 @@
 
 Based on the analysis of the Python scripts in the provided links, here's a detailed description of their purpose, architecture, components, and interactions:
 
-1. **elt_reddit_pipeline.py**: This script defines an Airflow DAG for the Reddit ETL pipeline. It orchestrates the execution of tasks in the pipeline, which include extraction, transformation, and loading of Reddit data. The script imports necessary modules, defines default arguments for the DAG, and sets up tasks using the `PythonOperator`. The tasks are defined in a specific order to ensure proper execution of the pipeline. The script also handles error logging and retries in case of task failures.
+*. **elt_reddit_pipeline.py**:
+  * This script defines an Airflow DAG for the Reddit ETL pipeline.
+  * It orchestrates the execution of tasks in the pipeline, which include extraction, transformation, and loading of Reddit data.
+  * Sets up tasks using the `BashOperator` - other python scripts run inside these bash operators via the `python` command.
+  * Order of scripts is:
+    * extract_reddit_etl.py
+    * upload_aws_s3_etl.py
+    * upload_aws_redshift_etl.py
 
-2. **download_redshift_to_csv.py**: This script is responsible for downloading data from an AWS Redshift database and saving it as a CSV file. It uses the `psycopg2` library to connect to the Redshift database, execute SQL queries, and fetch data. The fetched data is then written to a CSV file using Python's built-in `csv` module.
+* **extract_reddit_etl.py**:
+  * This script extracts data from Reddit using the Reddit API.
+  * It uses the `praw` library to interact with the Reddit API and fetch data based on specified parameters.
+  * The extracted data is then saved to a CSV file for further processing.
 
-3. **extract_reddit_etl.py**: This script extracts data from Reddit using the Reddit API. It uses the `praw` library to interact with the Reddit API and fetch data based on specified parameters. The extracted data is then saved to a CSV file for further processing.
+* **upload_aws_s3_etl.py**: This script uploads the Reddit data CSV file to an AWS S3 bucket. It uses the `boto3` library to interact with the AWS S3 service. The script checks if the specified S3 bucket exists and creates it if it doesn't. It then uploads the CSV file to the S3 bucket.
 
-4. **upload_aws_redshift_etl.py**: This script uploads the extracted and transformed Reddit data to an AWS Redshift database. It uses the `psycopg2` library to connect to the Redshift database and execute SQL queries for data insertion.
+* **upload_aws_redshift_etl.py**: This script uploads the extracted and transformed Reddit data to an AWS Redshift database. It uses the `psycopg2` library to connect to the Redshift database and execute SQL queries for data insertion.
 
-5. **upload_aws_s3_etl.py**: This script uploads the Reddit data CSV file to an AWS S3 bucket. It uses the `boto3` library to interact with the AWS S3 service. The script checks if the specified S3 bucket exists and creates it if it doesn't. It then uploads the CSV file to the S3 bucket.
+* **download_redshift_to_csv.py**: This script is responsible for downloading data from an AWS Redshift database and saving it as a CSV file. It uses the `psycopg2` library to connect to the Redshift database, execute SQL queries, and fetch data. The fetched data is then written to a CSV file using Python's built-in `csv` module.
 
-6. **validation.py**: This script is used to validate the input data before it's processed by the ETL pipeline. It checks if the input data meets certain criteria and raises an error if the validation fails.
+* **validation.py**: This script is used to validate the input data before it's processed by the ETL pipeline. It checks if the input data meets certain criteria and raises an error if the validation fails.
 
 Pros of this solution:
 - The use of Airflow allows for robust orchestration, scheduling, and monitoring of the ETL pipeline.
