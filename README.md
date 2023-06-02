@@ -16,6 +16,13 @@ _**Still in progress, stay tuned!**_
 I will rate each project by stars (★☆☆☆☆ / ★★☆☆☆ / ★★★☆☆ / ★★★★☆ / ★★★★★) based on my opinion about the project after analyzing its code and documentation.
 <br>
 
+* [Uber data platform](uber/README.md) - ★★★★★
+  * This is a very interesting case study of Uber's data platform
+  * It is not a GitHub project, but it is a very good source of information about data platforms
+  * It is very well documented and it contains a lot of useful information
+  * It is a very good starting point for learning about data platforms
+<br>
+
 * [Audiophile End-To-End ELT Pipeline](audiophile-end-to-end-elt-pipeline/README.md) - ★★★★☆
   * Pipeline scrapes data from Crinacle's website and stores them as CSV files in S3 bucket
   * Data are then loaded into Redshift and PostgreSQL databases
@@ -69,3 +76,5 @@ I will rate each project by stars (★☆☆☆☆ / ★★☆☆☆ / ★★★
 
 ### Articles & repositories
 * [How To Become a Data Engineer](https://github.com/adilkhash/Data-Engineering-HowTo)
+
+
