@@ -1,10 +1,11 @@
 # BDB - Unified integrated Data Analytics Platform
 * https://bdb.ai/
 * https://www.linkedin.com/pulse/big-data-pipeline-implementation-use-case-avin-jain/
+* YouTube video: https://www.youtube.com/watch?v=tpBTQ7Vitu0
 
 ## Schema
 (Downloaded from LinkedIn article)
-<img src="platform.jpeg" width=60% height=60%>
+<img src="platform.jpeg" width=40% height=40%>
 
 ## Architecture
 - **Data Ingestion**: The platform can handle a large set of streaming data. The data streams through a Kafka layer and are moved into a Data Lake (in HBase, Hadoop, Cassandra, Azure, or AWS) as Transient Data.
@@ -22,3 +23,14 @@
 - **Scalability and Benefits**: The BDB system works in one platform/integrated ecosystem on Cloud rather than working in SILOS like other vendors. It provides real-time attendance & assessment reporting to its entire 40 million active user base – Teachers, Students, Administrators, etc. It also leads to a substantial reduction in the cost of operation and saves time and effort to create an analytics platform.
 
 The architecture is designed to utilize IoT, ML, AI, BigData, and traditional data in a seamless manner. It has been implemented (at Beta Level) for an enterprise customer with 50 million active users and is now being applied to Banking and Financial Sector, Agri Data Science, WorkForce, and Health Care Case studies.
+
+## Verticals
+
+BDB provides solution for different verticals like:
+* automobile analytics
+* retail
+* education
+* telecom
+* media and entertainment
+* healthcare and insurance
+

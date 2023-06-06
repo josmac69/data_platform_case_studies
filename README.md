@@ -4,8 +4,10 @@ _**Still in progress, stay tuned!**_
 <br>
 
 ## General notes
-* So far investigation showed that Apache Spark is the most popular tool for processing of big data in data platforms
-*
+* So far investigation showed:
+  * Kafka is the most popular tool for data ingestion
+  * Apache Spark is the most popular tool for processing of big data in different parts of data platforms
+  * Apache Airflow is the most popular tool for orchestration of scheduled tasks
 
 ## Links to be reviewed
 * [SnowPlow](https://github.com/snowplow/snowplow)
@@ -21,7 +23,7 @@ I will rate each project by stars (★☆☆☆☆ / ★★☆☆☆ / ★★★
 <br>
 
 * [BDB - Unified integrated Data Analytics Platform](bdb/README.md) - ★★★★★
-  *
+
 
 * [Uber data platform](uber/README.md) - ★★★★★
   * This is a very interesting case study of Uber's data platform
