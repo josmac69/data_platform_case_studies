@@ -60,10 +60,28 @@ Sure, here are the key points about the first generation of Uber's data pipeline
 
 - By early 2017, Uber's Big Data platform was used by engineering and operations teams across the company, enabling them to access new and historical data all in one place.
 - With over 100 petabytes of data in HDFS, 100,000 vcores in their compute cluster, 100,000 Presto queries per day, 10,000 Spark jobs per day, and 20,000 Hive queries per day, their Hadoop analytics architecture was hitting scalability limitations and many services were affected by high data latency.
-- To address these limitations, they built Hadoop Upserts anD Incremental (Hudi), an open source Spark library that provides an abstraction layer on top of HDFS and Parquet to support the required update and delete operations.
+- To address these limitations, they built [Hadoop Upserts anD Incremental](hudi.md) (Hudi), an open source Spark library that provides an abstraction layer on top of HDFS and Parquet to support the required update and delete operations.
 - Hudi enables them to update, insert, and delete existing Parquet data in Hadoop. Moreover, Hudi allows data users to incrementally pull out only changed data, significantly improving query efficiency and allowing for incremental updates of derived modeled tables.
 - They also formalized the hand-over of upstream datastore changes between the storage and big data teams through Apache Kafka. Upstream datastore events stream into Kafka with a unified Avro encoding including standard global metadata headers attached.
-- Their data ingestion platform, Marmaray, runs in mini-batches and picks up the upstream storage changelogs from Kafka, applying them on top of the existing data in Hadoop using Hudi library.
+- Their data ingestion platform, [Marmaray](marmaray.md), runs in mini-batches and picks up the upstream storage changelogs from Kafka, applying them on top of the existing data in Hadoop using Hudi library.
 - Using the Hudi library, they were able to move away from the snapshot-based ingestion of raw data to an incremental ingestion model that enables them to reduce data latency from 24 hours to less than one hour.
 - They built a generic ingestion platform that facilitates the ingestion of raw data into Hadoop in a unified and configurable way. Now, their Big Data platform updates raw Hadoop tables incrementally with a data latency of 10-15 minutes, allowing for fast access to source data.
 - The use of a Hudi writer during an ETL job enables them to update old partitions in the derived modeled tables without recreating the entire partition or table. Thus, their modeling ETL jobs use Hudi readers to incrementally fetch only the changed data from the source table and use Hudi writers to incrementally update the derived output table. Now, ETL jobs also finish in less than 30 minutes, providing end-to-end latency of less than one hour for all derived tables in Hadoop.
+
+### Fourth Generation
+
+- The 4th generation of Uber's data pipeline was built to address the limitations of the previous generations, which included HDFS scalability limitation, the need for faster data in Hadoop, support for updates and deletes in Hadoop and Parquet, and faster ETL and modeling.
+
+- To address these limitations, Uber built Hadoop Upserts anD Incremental (Hudi), an open source Spark library that provides an abstraction layer on top of HDFS and Parquet to support the required update and delete operations. Hudi can be used from any Spark job, is horizontally scalable, and only relies on HDFS to operate.
+
+- Hudi enables Uber to update, insert, and delete existing Parquet data in Hadoop. Moreover, Hudi allows data users to incrementally pull out only changed data, significantly improving query efficiency and allowing for incremental updates of derived modeled tables.
+
+- Uber also formalized the hand-over of upstream datastore changes between the storage and big data teams through Apache Kafka. Upstream datastore events stream into Kafka with a unified Avro encoding including standard global metadata headers attached.
+
+- Uber's data ingestion platform, Marmaray, runs in mini-batches and picks up the upstream storage changelogs from Kafka, applying them on top of the existing data in Hadoop using Hudi library.
+
+- Hudi and Marmaray together enabled Uber to move away from the snapshot-based ingestion of raw data to an incremental ingestion model that enables them to reduce data latency from 24 hours to less than one hour.
+
+- Uber also built a generic ingestion platform that facilitates the ingestion of raw data into Hadoop in a unified and configurable way. Now, their Big Data platform updates raw Hadoop tables incrementally with a data latency of 10-15 minutes, allowing for fast access to source data.
+
+- The use of a Hudi writer during an ETL job enables Uber to update old partitions in the derived modeled tables without recreating the entire partition or table. Thus, their modeling ETL jobs use Hudi readers to incrementally fetch only the changed data from the source table and use Hudi writers to incrementally update the derived output table. Now, ETL jobs also finish in less than 30 minutes, providing end-to-end latency of less than one hour for all derived tables in Hadoop.
