@@ -3,6 +3,10 @@
 _**Still in progress, stay tuned!**_
 <br>
 
+## General notes
+* So far investigation showed that Apache Spark is the most popular tool for processing of big data in data platforms
+*
+
 ## Links to be reviewed
 * [SnowPlow](https://github.com/snowplow/snowplow)
 * [SeaTunnel](https://github.com/apache/seatunnel)
@@ -15,6 +19,9 @@ _**Still in progress, stay tuned!**_
 ## Reviewed projects
 I will rate each project by stars (★☆☆☆☆ / ★★☆☆☆ / ★★★☆☆ / ★★★★☆ / ★★★★★) based on my opinion about the project after analyzing its code and documentation.
 <br>
+
+* [BDB - Unified integrated Data Analytics Platform](bdb/README.md) - ★★★★★
+  *
 
 * [Uber data platform](uber/README.md) - ★★★★★
   * This is a very interesting case study of Uber's data platform
