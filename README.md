@@ -1,22 +1,22 @@
 # Data platform - case studies
-
 _**Still in progress, stay tuned!**_
 <br>
 
-## General notes
+* In this repository I document my research of different existing DP / ETL / ELT solutions which are publicly available on GitHub
+* I heavily utilized AI tools for this project - ChatGPT-4, ChatSonic and Github Copilot
+
+## Modern Data Stack
+<img src="modern-data-stack.png" width=40% height=40%>
+<br>
+
+
+## Generic Data Platform
+<img src="uber/uber-generic.png" width=40% height=40%>
+<br>
 * So far investigation showed:
   * Kafka is the most popular tool for data ingestion
   * Apache Spark is the most popular tool for processing of big data in different parts of data platforms
   * Apache Airflow is the most popular tool for orchestration of scheduled tasks
-
-## Links to be reviewed
-* [SnowPlow](https://github.com/snowplow/snowplow)
-* [SeaTunnel](https://github.com/apache/seatunnel)
-*
-
-## Introduction
-* In this repository I document my research of different existing DP / ETL solutions which are publicly available on GitHub
-* I heavily utilized AI tools for this project - ChatGPT-4, ChatSonic and Github Copilot
 
 ## Reviewed projects
 I will rate each project by stars (★☆☆☆☆ / ★★☆☆☆ / ★★★☆☆ / ★★★★☆ / ★★★★★) based on my opinion about the project after analyzing its code and documentation.
@@ -87,3 +87,7 @@ I will rate each project by stars (★☆☆☆☆ / ★★☆☆☆ / ★★★
 * [How To Become a Data Engineer](https://github.com/adilkhash/Data-Engineering-HowTo)
 
 
+## Links to be reviewed
+* [SnowPlow](https://github.com/snowplow/snowplow)
+* [SeaTunnel](https://github.com/apache/seatunnel)
+*
