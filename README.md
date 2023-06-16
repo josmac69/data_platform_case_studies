@@ -6,6 +6,7 @@ _**Still in progress, stay tuned!**_
 * I heavily utilized AI tools for this project - ChatGPT-4, ChatSonic and Github Copilot
 
 ## Modern Data Stack
+* Snapshot from [Udemy course - The Complete dbt bootcamp](https://www.udemy.com/course/complete-dbt-data-build-tool-bootcamp-zero-to-hero-learn-dbt)
 <img src="modern-data-stack.png" width=40% height=40%>
 <br>
 
@@ -17,6 +18,7 @@ _**Still in progress, stay tuned!**_
   * Kafka is the most popular tool for data ingestion
   * Apache Spark is the most popular tool for processing of big data in different parts of data platforms
   * Apache Airflow is the most popular tool for orchestration of scheduled tasks
+  * dbt (data build tool) is the most popular tool for data transformation (I dedicated another repository to dbt examples)
 
 ## Reviewed projects
 I will rate each project by stars (★☆☆☆☆ / ★★☆☆☆ / ★★★☆☆ / ★★★★☆ / ★★★★★) based on my opinion about the project after analyzing its code and documentation.
